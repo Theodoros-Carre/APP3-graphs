@@ -2,13 +2,6 @@
 
 This project analyzes social networks represented as directed or undirected graphs. It reads interaction data from CSV files and computes key insights like top leaders, most active followers, and shortest paths between nodes. It also visualizes the graph, highlighting the most influential individuals.
 
-## 📁 Project Files
-
-- `students.csv`, `club.txt`, `anybeatAnonymized.csv`, etc. — input data files representing social networks.
-- `network_analysis.py` — main Python script (your code).
-- `adjacency_matrix.txt` — output adjacency matrix (saved after analysis).
-- Generated graph visualization — shown using `matplotlib`.
-
 ## ✅ Features
 
 - **Graph construction** from CSV files (directed or undirected)
