@@ -62,32 +62,6 @@ The GUI will launch automatically.
 - Layout auto-adjusts for readability
 - Warning appears if graph is too large to visualize (> 1000 nodes)
 
-## 📦 Dependencies
-
-Make sure to install:
-
-```bash
-pip install numpy matplotlib networkx
-```
-
-Optionally, for large graphs:
-
-```bash
-pip install scipy
-```
-
-## 🏁 Running the Script
-
-```bash
-python network_analysis.py
-```
-
-The script will print:
-- Top leaders and their followers
-- Best followers
-- Shortest path between top leaders
-- It will also display a graph window
-
 ## 📥 Input Format
 
 Your input file (CSV or TXT) should contain edges in the form:
@@ -104,12 +78,8 @@ id1,id2
 - Headers like `id1,id2` are automatically ignored
 - Nodes should be integers
 
-## 📌 Notes
+## 🙌 Author
 
-- The adjacency matrix is saved to `adjacency_matrix.txt`
-- The graph visualization is shown in a pop-up window
-- Directed graphs show arrows, undirected graphs use two-way connections
-
-## 👨‍🎓 Final Thoughts
-
-This project meets the full requirements of a social network analysis assignment using core algorithms and graph theory. It’s modular, readable, and easily extendable. 🎉
+- CARRE Theodoros, JEYANESHAN Dacshayan, TANTER Thibaud, VUKOVIC Luka 
+- Advanced Algorithms 3 | Social Network Project  
+- ESME
