@@ -19,31 +19,56 @@ This project analyzes social networks represented as directed or undirected grap
 3. Detect leaders based on incoming connections
 4. Detect best followers based on outgoing connections
 5. Compute shortest path between top 2 leaders
-6. Visualize the graph with:
-   - Red nodes = leaders
-   - Blue nodes = others
-   - Arrows (if directed)
 
-## 🔧 Configuration
+## 🧰 Installation
 
-Inside the script, you can configure:
+Before running the app, install the required Python packages:
 
-```python
-filename = 'students.csv'         # File to analyze
-directed = False                  # True = directed graph, False = undirected
-top_n_leaders = 3                 # Number of top leaders to identify
-top_n_followers = 5               # Number of best followers to find
+```bash
+pip install numpy matplotlib networkx pyqt5
 ```
 
-## 📊 Visualization
+## 🚀 How to Run
 
-The graph is visualized using `networkx` and `matplotlib`. Leaders appear in red, other nodes in sky blue. Spacing is optimized with `spring_layout` using:
-
-```python
-pos = nx.spring_layout(G, k=0.5, iterations=100)
+```bash
+python APP3_final.py
 ```
 
-This improves readability, even for more complex networks.
+The GUI will launch automatically.
+
+## 📋 How to Use the App
+
+### 1. Select Your File
+- Choose file type (`CSV` or `TXT`)
+- Click **“Select File”**
+- Pick your dataset file (e.g., `students.csv`, `club.txt`)
+
+### 2. Choose Graph Settings
+- Select graph type:
+  - `Directed Graph`: arrows have direction (e.g., Twitter)
+  - `Undirected Graph`: mutual links (e.g., Facebook)
+- Set:
+  - Number of **leaders**
+  - Number of **best followers**
+
+### 3. Run the Analysis
+- Click **“Run Analysis”**
+- View results in the right panel:
+  - Leaders and their followers
+  - Best followers
+  - Shortest path (if it exists)
+
+### 4. Save the Adjacency Matrix (Optional)
+- Click **“Save Matrix”**
+- Choose file format (`.txt` or `.csv`)
+
+## 📊 Graph Visualization
+
+- Red nodes = Leaders
+- Sky blue nodes = Regular members
+- Green = Shortest path (if found)
+- Layout auto-adjusts for readability
+- Warning appears if graph is too large to visualize (> 1000 nodes)
 
 ## 📦 Dependencies
 
@@ -71,19 +96,21 @@ The script will print:
 - Shortest path between top leaders
 - It will also display a graph window
 
-## 📥 Input File Format
+## 📥 Input Format
 
-The CSV should contain two columns with node IDs (integers):
+Your input file (CSV or TXT) should contain edges in the form:
 
 ```
 id1,id2
 0,1
 1,2
-3,2
+3,4
 ...
 ```
 
-Header is optional — if present, it will be ignored.
+- Each line represents an edge
+- Headers like `id1,id2` are automatically ignored
+- Nodes should be integers
 
 ## 📌 Notes
 
