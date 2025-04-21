@@ -12,14 +12,6 @@ This project analyzes social networks represented as directed or undirected grap
 - **Shortest path** computation between top leaders
 - **Graph visualization** with color-coded leaders and improved layout
 
-## 🧠 How It Works
-
-1. Load a CSV file of edges (e.g., `students.csv`)
-2. Build the graph and adjacency matrix
-3. Detect leaders based on incoming connections
-4. Detect best followers based on outgoing connections
-5. Compute shortest path between top 2 leaders
-
 ## 🧰 Installation
 
 Before running the app, install the required Python packages:
